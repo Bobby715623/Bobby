@@ -1,0 +1,8 @@
+
+public class Seller extends Employee{
+    public Food sell(Employee e){
+        Food f1 = new Food();
+        double price = Food.getPrice();
+        if (price >= 50)
+    }
+}
