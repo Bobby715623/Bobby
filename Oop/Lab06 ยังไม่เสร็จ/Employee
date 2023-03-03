@@ -1,0 +1,36 @@
+
+public class Employee {
+    private static String nationality = "Thai";
+    private String name;
+    private Wallet wallet;
+    private int energy;
+    
+    public boolean equals(Employee e){
+        if (this.name.equals(e.name)){
+            return true;
+        }else{
+            return false;}
+    }
+    public void setName(String name){
+        this.name = name;}
+    public void setWallet(Wallet wallet){
+        this.wallet = wallet;}
+    public void setEnergy(int energy){
+        this.energy = energy;}
+    public static void setNationality(String nationality){
+        Employee.nationality = nationality;}
+    public String getName(){
+        return name;}
+    public Wallet getWallet(){
+        return wallet;}
+    public int getEnergy(){
+        return energy;}
+    public static String getNationality(){
+        return nationality;}
+    
+    public void eat(Food f){
+        energy = energy + f.energy;}
+    public boolean buyFood(Seller s){
+        
+    }
+}
