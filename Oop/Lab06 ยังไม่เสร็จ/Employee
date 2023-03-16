@@ -7,30 +7,47 @@ public class Employee {
     
     public boolean equals(Employee e){
         if (this.name.equals(e.name)){
-            return true;
+            return true;}
+    else{
+        return false;}
+    }
+    public String toString(){
+        return "My name is "+name+"."+" \nI have "+energy+" energy left.\nI have a balance of "+wallet.getBalance()+" baht.";
+    }
+    public boolean buyFood(Seller s){
+        if (s.sell(this)!= null){
+           Food food = new Food();
+           this.eat(food);
+           return true;
         }else{
-            return false;}
+            return false;
+        }
+    }
+    public void eat(Food f){
+        this.energy += f.getEnergy();
+    }
+    public String getName(){
+        return name;
     }
     public void setName(String name){
-        this.name = name;}
-    public void setWallet(Wallet wallet){
-        this.wallet = wallet;}
-    public void setEnergy(int energy){
-        this.energy = energy;}
-    public static void setNationality(String nationality){
-        Employee.nationality = nationality;}
-    public String getName(){
-        return name;}
+        this.name = name;
+    }
     public Wallet getWallet(){
-        return wallet;}
+        return wallet;
+    }
+    public void setWallet(Wallet wallet){
+        this.wallet = wallet;
+    }
     public int getEnergy(){
-        return energy;}
+        return energy;
+    }
+    public void setEnergy(int energy){
+        this.energy = energy;
+    }
     public static String getNationality(){
-        return nationality;}
-    
-    public void eat(Food f){
-        energy = energy + f.energy;}
-    public boolean buyFood(Seller s){
-        
+        return nationality;
+    }
+    public static void setNationality(String nationality){
+        Employee.nationality = nationality;
     }
 }
