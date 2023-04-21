@@ -1,0 +1,43 @@
+import java.awt.*;
+import javax.swing.*;
+public class CalculatorTwoGUI {
+    private JFrame fr;
+    private JTextField tf;
+    private JButton bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt0;
+    private JButton plus, minus, multi, divide, equal, clear;
+    private JPanel p;
+    
+    public CalculatorTwoGUI(){
+        fr = new JFrame("My Calculator");
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fr.setLayout(new BorderLayout());
+        p = new JPanel();
+        tf = new JTextField(20);
+        bt0 = new JButton("0");
+        bt1 = new JButton("1");
+        bt2 = new JButton("2");
+        bt3 = new JButton("3");
+        bt4 = new JButton("4");
+        bt5 = new JButton("5");
+        bt6 = new JButton("6");
+        bt7 = new JButton("7");
+        bt8 = new JButton("8");
+        bt9 = new JButton("9");
+        plus = new JButton("+");
+        minus = new JButton("-");
+        multi = new JButton("x");
+        divide = new JButton("/");
+        equal = new JButton("=");
+        clear = new JButton("c");
+        fr.add(tf, BorderLayout.NORTH);
+        p.setLayout(new GridLayout(4,4));
+        p.add(bt7); p.add(bt8); p.add(bt9); p.add(plus);
+        p.add(bt4); p.add(bt5); p.add(bt6); p.add(minus);
+        p.add(bt1); p.add(bt2); p.add(bt3); p.add(multi);
+        p.add(bt0); p.add(clear); p.add(equal); p.add(divide);
+        fr.add(p, BorderLayout.CENTER);
+        fr.setResizable(false);
+        fr.setSize(300, 300);
+        fr.setVisible(true);
+    }
+}
